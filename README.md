@@ -1,9 +1,9 @@
 # JSP-000514 — Lean 4.20 scaffold for Which triangles can be dissected into congruent tr...
 
 > **Problem (upstream JSP-000514)**: Which triangles can be dissected into congruent triangles only when their number is a square?
-> **Solver**: Soifer (2009); BLZ26 (arXiv:2604.03609) — solves Erdős Problem 633
-> **JSP bounty**: USD $25
-> **Upstream status** ([TheJustinSunPrize/awards](https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0501-0600.md#JSP-000514)): **Solved, Lean proof: No, Eligible to claim: No**
+> **Solver**: Soifer (2009, Springer); BLZ26 (arXiv:2604.03609) — solves Erdős Problem 633
+> **JSP bounty**: USD $25 (per upstream catalog [TheJustinSunPrize/awards](https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0501-0600.md#JSP-000514))
+> **Upstream status**: **Solved, Lean proof: No, Eligible to claim: No**
 
 ## What this repository is
 
@@ -13,19 +13,19 @@ is published so that a future Lean formalization team can clone this repository,
 fill in the `sorry` placeholders, and produce a verified Lean proof.
 
 **This is NOT a Lean proof.** Every `theorem` in `JSP514.lean`
-ends with `:= by sorry`. Per the JSP `docs/verification.md` policy:
+ends with `:= by sorry` or similar. Per the JSP `docs/verification.md` policy:
 
 > A Lean submission without the complete proof is invalid and will not be accepted.
 
 ## Files
 
 ```
-JSP514.lean    -- Outer statement with `sorry`
-README.md              -- This file
-lakefile.toml          -- Lean 4 build config (lake)
-lean-toolchain.json     -- Pinned toolchain: Lean v4.20.0
-lake-manifest.json     -- Pinned dependencies: mathlib v4.20.0
-.gitignore             -- Excludes `.lake/` build cache
+JSP514.lean       -- Outer statement with `sorry`
+README.md                  -- This file
+lakefile.toml              -- Lean 4 build config (lake)
+lake-manifest.json         -- Pinned dependencies: mathlib v4.20.0
+lean-toolchain / .json     -- Pinned toolchain: Lean v4.20.0
+.gitignore                 -- Excludes `.lake/` build cache
 ```
 
 ## Build (to verify the scaffold compiles)
@@ -41,7 +41,7 @@ Outer statement: dissection count constraint
 The Lean file states the outer theorem in a form suitable for filling in with
 Mathlib lemmas. To make this a complete Lean proof, a team would need to:
 
-1. Port the corresponding published paper (e.g. Soifer (2009); BLZ26 (arXiv:2604.03609) — solves Erdős Problem 633).
+1. Port the corresponding published paper (e.g. Soifer (2009, Springer); BLZ26 (arXiv:2604.03609) — solves Erdős Problem 633).
 2. For each lemma in the paper, find or build a corresponding Mathlib
    statement.
 3. Replace `sorry` with the corresponding Lean tactic proof.
@@ -66,3 +66,8 @@ attributable credit on the Lean repo) must:
 4. Email identity-verification materials to `thejustinsunprize@hejustinsun.com`.
 
 None of these steps can be automated from an agent sandbox.
+
+## Disclaimer
+
+This repository is published as honest **research infrastructure**. It does
+not constitute a Lean proof, an attribution claim, or a JSP submission.
